@@ -7,7 +7,7 @@ function Header() {
     <header className="flex justify-between p-4 bg-blue-600 text-white fixed w-full">
       <Logo />
       <Nav />
-      <span class="snipcart-items-count"></span>
+      {/* <span class="snipcart-items-count"></span> */}
     </header>
   )
 }
