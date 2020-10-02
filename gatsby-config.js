@@ -19,9 +19,12 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-snipcartv3',
+      resolve: 'gatsby-plugin-snipcart',
       options: {
-        apiKey: process.env.SNIP_KEY
+        apiKey: process.env.SNIP_KEY,
+        js: "https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js",
+        jquery: false,
+        styles: "https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css"
       }
     },
     `gatsby-plugin-postcss`,
