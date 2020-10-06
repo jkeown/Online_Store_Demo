@@ -15,10 +15,14 @@
   },
   "dependencies": {
     "gatsby": "^2.24.63",
+    "gatsby-plugin-react-helmet": "^3.3.12",
+    "gatsby-plugin-sharp": "^2.6.38",
     "gatsby-plugin-snipcart-advanced": "^1.0.1",
-    "gatsby-source-contentful": "^2.3.48",
+    "gatsby-source-contentful": "^2.3.49",
+    "gatsby-transformer-sharp": "^2.5.16",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",

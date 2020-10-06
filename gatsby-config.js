@@ -24,6 +24,8 @@ module.exports = {
         apiKey: process.env.GATSBY_SNIPCART_API_KEY,
       }
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-sharp`,
 ],
 }

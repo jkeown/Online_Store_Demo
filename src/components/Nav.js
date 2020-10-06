@@ -2,10 +2,11 @@ import React from "react"
 
 function Nav() {
   return (
-    <ul className="w-1/3 flex justify-between">
+    <ul className="flex justify-between">
       {/* <li>Store</li>
       <li>Contact</li> */}
-      <li class="snipcart-checkout">Cart</li>
+      <span class="snipcart-items-count bg-yellow-500 px-2 mr-1 rounded-full"></span>
+      <li class="snipcart-checkout cursor-pointer">Cart</li>
     </ul>
   )
 }

@@ -1,9 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&family=Roboto+Condensed&display=swap");
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
-body{
-    background: url(../images/FH-background.svg);
+:root {
+  --blue: #3182ce;
+}
+body {
+  background: url(../images/FH-background.svg);
+}
+h2 {
+  font-family: "Pompiere", cursive;
+}
+p {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.category:before {
+  position: relative;
+  left: 2.75rem;
+  top: .5rem;
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  content: "";
+  background: linear-gradient(to right, #fefcbf, #f6e05e);
+  border-radius: 50%;
+  z-index: -1;
 }
