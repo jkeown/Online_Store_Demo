@@ -17,7 +17,7 @@ function Home() {
           description
           contentfulid
           image {
-            resize {
+            resize(quality: 100) {
               src
             }
           }
