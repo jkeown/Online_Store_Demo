@@ -8,30 +8,23 @@ import { useStaticQuery, graphql } from "gatsby"
 function Home() {
   const data = useStaticQuery(graphql`
    query {
-  allContentfulProduct {
-    edges {
-      node {
-        price
-        name
-        image {
-          file {
-            fileName
-            url
-          }
-          fluid(maxWidth: 10) {
-            base64
-            tracedSVG
-            srcWebp
-            srcSetWebp
+    allContentfulProduct {
+      edges {
+        node {
+          price
+          name
+          category
+          description
+          contentfulid
+          image {
+            resize {
+              src
+            }
           }
         }
-        category
-        description
-        contentfulid
       }
     }
   }
-}
   `)
 
   const shirts = data.allContentfulProduct.edges
@@ -57,7 +50,7 @@ function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-    <Head />
+      <Head />
       <Header />
       <main class="mx-auto flex-grow mt-24 w-11/12 lg:w-9/12">
         <section>

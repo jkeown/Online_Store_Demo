@@ -5,7 +5,7 @@ function Image(props) {
   return (
     <img
       className="object-cover h-64 w-full"
-      src={props.product.product.node.image.file.url}
+      src={props.product.product.node.image.resize.src}
       alt={props.product.product.node.name}
     />
   )
