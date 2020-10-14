@@ -48,7 +48,7 @@ function Home() {
     mainContent.push(
       <section>
         <div className="my-12">
-          <h2 className="category text-center text-6xl capitalize">{category}</h2>
+          <h2 className="category text-center text-6xl capitalize">{category}s</h2>
         </div>
         <div className="flex flex-wrap justify-evenly lg:justify-between">
           {products}
