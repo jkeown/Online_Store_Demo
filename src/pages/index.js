@@ -26,57 +26,44 @@ function Home() {
     }
   }
   `)
+  // get all categories
+  let categories = data.allContentfulProduct.edges
+    .map(edge => edge.node.category)
 
-  const shirts = data.allContentfulProduct.edges
-    .filter(edge => edge.node.category === "shirt")
-    .map(edge => {
-      return <Product product={edge} />
-    })
-  const hats = data.allContentfulProduct.edges
-    .filter(edge => edge.node.category === "hat")
-    .map(edge => {
-      return <Product product={edge} />
-    })
-  const mugs = data.allContentfulProduct.edges
-    .filter(edge => edge.node.category === "mug")
-    .map(edge => {
-      return <Product product={edge} />
-    })
-  const stickers = data.allContentfulProduct.edges
-    .filter(edge => edge.node.category === "sticker")
-    .map(edge => {
-      return <Product product={edge} />
-    })
+  categories = new Set(categories)
+
+  // alphabetize categories
+  // categories = [...(new Set(categories))].sort()
+
+  let mainContent = []
+
+  // sort all products  by category to display
+  for (let category of categories) {
+    let products = data.allContentfulProduct.edges
+      .filter(edge => edge.node.category === category)
+      .map(edge => {
+        return <Product product={edge} />
+      })
+
+    mainContent.push(
+      <section>
+        <div className="my-12">
+          <h2 className="category text-center text-6xl capitalize">{category}</h2>
+        </div>
+        <div className="flex flex-wrap justify-evenly lg:justify-between">
+          {products}
+        </div>
+      </section>
+    )
+  }
+
 
   return (
     <div className="min-h-screen flex flex-col">
       <Head />
       <Header />
       <main class="mx-auto flex-grow mt-24 w-11/12 lg:w-9/12">
-        <section>
-          <div className="my-12">
-            <h2 className="category text-center text-6xl">Shirts</h2>
-          </div>
-          <div className="flex flex-wrap justify-evenly lg:justify-between">{shirts}</div>
-        </section>
-        <section>
-          <div className="my-12">
-            <h2 className="category text-center text-6xl">Hats</h2>
-          </div>
-          <div className="flex flex-wrap justify-evenly lg:justify-between">{hats}</div>
-        </section>
-        <section>
-          <div className="my-12">
-            <h2 className="category text-center text-6xl">Stickers</h2>
-          </div>
-          <div className="flex flex-wrap justify-evenly lg:justify-between">{stickers}</div>
-        </section>
-        <section>
-          <div className="my-12">
-            <h2 className="category text-center text-6xl">Mugs</h2>
-          </div>
-          <div className="flex flex-wrap justify-evenly lg:justify-between">{mugs}</div>
-        </section>
+        {mainContent}
       </main>
       <Footer />
     </div>
