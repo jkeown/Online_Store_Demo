@@ -4,9 +4,9 @@ import facebook from "../images/icons/facebook.svg"
 import youtube from "../images/icons/youtube.svg"
 
 
-function getCurrentYear(){
+function getCurrentYear() {
   let thisYear = new Date().getFullYear()
-  if(thisYear !== 2020){
+  if (thisYear !== 2020) {
     return ` - ${thisYear.toString().substring(2)}`
   }
 }
@@ -19,7 +19,7 @@ function Footer() {
         <a href="#"><img src={facebook} /></a>
         <a href="#"><img src={youtube} /></a>
       </div>
-      <small className="text-blue-300">&copy; Copyright 2020{getCurrentYear()} FEARLESS HUSTLE</small>
+      <small className="text-blue-300">&copy; Copyright 2020{getCurrentYear()} Kind Websites</small>
     </footer>
   )
 }

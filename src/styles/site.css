@@ -6,9 +6,7 @@
 :root {
   --blue: #3182ce;
 }
-body {
-  background: url(../images/FH-background.svg);
-}
+
 h2 {
   font-family: "Pompiere", cursive;
 }
@@ -27,4 +25,13 @@ p {
   background: linear-gradient(to right, #fefcbf, #f6e05e);
   border-radius: 50%;
   z-index: -1;
+}
+.logo{
+  text-transform: uppercase;
+  font-size: .7rem;
+  letter-spacing: 1px;
+}
+.logo span{
+  letter-spacing: 5px;
+  font-size: initial;
 }
