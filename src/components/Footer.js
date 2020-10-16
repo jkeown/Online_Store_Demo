@@ -19,7 +19,7 @@ function Footer() {
         <a href="#"><img src={facebook} /></a>
         <a href="#"><img src={youtube} /></a>
       </div>
-      <small className="text-blue-300">&copy; Copyright 2020{getCurrentYear()} Kind Websites</small>
+      <small className="text-blue-300">&copy; Copyright 2020{getCurrentYear()} KIND Websites</small>
     </footer>
   )
 }
