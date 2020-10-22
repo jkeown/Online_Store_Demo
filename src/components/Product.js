@@ -8,8 +8,8 @@ function Product({ product }) {
       <div>
         <Image product={product} />
       </div>
-      <div className="flex justify-between leading-loose p-2">
-        <h2 className="font-bold text-blue-500 text-2xl">{product.node.name}</h2>
+      <div className="flex justify-between items-baseline leading-loose p-2">
+        <h2 className="font-bold text-blue-500 text-3xl">{product.node.name}</h2>
         <span className="font-bold text-yellow-600 text-lg">
           $ {product.node.price}
         </span>
