@@ -4,7 +4,7 @@ import Button from "./Button"
 
 function Product({ product }) {
   return (
-    <div style={{ "min-width": 275 }} className="w-11/12 md:w-5/12 lg:w-2/12 border-2 border-black mb-8 text-blue-800 pb-2">
+    <div style={{ "min-width": 275 }} className="w-11/12 md:w-5/12 lg:w-2/12 border border-black mb-8 text-blue-800 pb-2">
       <div>
         <Image product={product} />
       </div>
