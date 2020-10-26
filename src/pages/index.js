@@ -48,7 +48,7 @@ function Home() {
     mainContent.push(
       <section>
         <div className="my-12">
-          <h2 className="category text-center text-6xl capitalize">{category}s</h2>
+          <h2 className="category text-center text-6xl capitalize relative">{category}s</h2>
         </div>
         <div className="flex flex-wrap justify-evenly lg:justify-between">
           {products}
@@ -62,7 +62,7 @@ function Home() {
     <div className="min-h-screen flex flex-col">
       <Head />
       <Header />
-      <main class="mx-auto flex-grow mt-24 w-11/12 lg:w-9/12">
+      <main class="mx-auto flex-grow mt-12 w-11/12 lg:w-9/12">
         {mainContent}
       </main>
       <Footer />
