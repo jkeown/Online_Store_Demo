@@ -6,7 +6,12 @@ function Button({ product }) {
             data-item-id={product.node.contentfulid}
             data-item-price={product.node.price}
             data-item-url="/"
-            data-item-name={product.node.name}>
+            data-item-name={product.node.name}
+            data-item-custom1-name="Size"
+            data-item-custom1-options="S|M|L|XL|XXL|XXXL"
+            data-item-custom2-name="Color"
+            data-item-custom2-options="Red|White|Black|Silver"
+        >
             Add to Cart
         </button>
     )
