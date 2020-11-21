@@ -4,7 +4,7 @@ import Nav from "./Nav"
 
 function Header() {
   return (
-    <header className="flex justify-center p-4 bg-blue-600 text-white fixed w-full z-50">
+    <header className="flex justify-center p-4 bg-blue-600 text-white fixed w-full z-10">
       <div className="header-container flex justify-between items-center w-full md:w-8/12 lg:w-6/12">
         <Logo />
         <Nav />
