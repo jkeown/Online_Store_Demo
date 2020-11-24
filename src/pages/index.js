@@ -33,7 +33,7 @@ function Home() {
   categories = new Set(categories)
 
   // alphabetize categories
-  // categories = [...(new Set(categories))].sort()
+  categories = [...(new Set(categories))].sort()
 
   let mainContent = []
 
@@ -48,7 +48,9 @@ function Home() {
     mainContent.push(
       <section>
         <div className="my-12">
-          <h2 className="category text-center text-6xl capitalize relative">{category}s</h2>
+          <h2 className="category text-center text-6xl capitalize relative">{
+            !isNaN(category.charAt(0)) ? category.substr(1) : category
+          }s</h2>
         </div>
         <div className="flex flex-wrap justify-evenly lg:justify-between">
           {products}
